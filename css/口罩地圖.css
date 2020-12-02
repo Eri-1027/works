@@ -1,0 +1,312 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#map { 
+    width: 100%;
+    height: 100%; 
+    z-index: 0;
+}
+#map .leaflet-left{
+    top:20px;
+    right: 20px;
+    left: auto;
+}
+/* 圖層樣式 */
+.marker-cluster-small {
+    background-color: rgba(181, 226, 140, 0.6);
+    }
+.marker-cluster-small div {
+    background-color: rgba(110, 204, 57, 0.6);
+    }
+
+.marker-cluster-medium {
+    background-color: rgba(241, 211, 87, 0.6);
+    }
+.marker-cluster-medium div {
+    background-color: rgba(240, 194, 12, 0.6);
+    }
+
+.marker-cluster-large {
+    background-color: rgba(253, 156, 115, 0.6);
+    }
+.marker-cluster-large div {
+    background-color: rgba(241, 128, 23, 0.6);
+    }
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+    }
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+.marker-cluster span {
+    line-height: 30px;
+    }
+/* 圖標彈跳視窗 */
+.leaflet-popup-content h1{
+    font-size: 30px;
+    color: #039BE5;
+    font-weight: bold;
+}
+.leaflet-popup-content h2{
+    font-size: 18px;
+    font-family: monospace;
+    color: #757575;
+}
+.leaflet-popup-content em{
+    font-size: 17px;
+    font-weight: bold;
+}
+.leaflet-popup-content h4{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.leaflet-popup-content div{
+    text-align: center;
+    font-size: 25px;
+}
+.leaflet-popup-content h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+.wrap{
+    width: 400px;
+    height: 100%;
+    margin-left: 5px;
+    position: relative;
+    z-index: 1;
+    position: absolute;
+    transform: translateX(-410px); 
+    transition: all 1s;
+}
+@media(max-width:376px){
+    .wrap{
+        width: 90%;
+        transform: translateX(-100%);
+        margin-left: 0px;
+    }
+}
+ .open{
+transform: translateX(0px);
+transition: all 1s;
+} 
+.header_meun{
+    padding: 10px 15px;;
+    background-color: #03A9F4;
+    box-shadow: inset 0px 0px 18px 5px #ddd;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.header_meun .Dayweek{
+    font-size: 25px;
+    color: #f5f5f5;
+}
+.header_meun .YeMoDay{
+    font-size: 20px;
+    color: #f5f5f5;
+}
+.header_meun .id{
+    color: #f5f5f5;
+    font-size: 20px;
+}
+@media(max-width:376px){
+    .header_meun .id{
+        font-size: 16px;
+    }
+}
+.id em{
+    color: #FFEB3B;;
+}
+.header_meun .unit{
+    position: absolute;
+    right: 2%;
+}
+.unit h1{
+    color: white;
+    margin-bottom: 5%;
+}
+.unit p{
+    color: white;
+}
+.header{
+    background-color: #9dc6fb;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.header_search{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.trxt_input{
+    display: flex;
+    align-items: center;
+}
+@media(max-width:376px){
+    .trxt_input{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.trxt_input .logo{
+    width: 70px;
+}
+.search_img{
+    position: absolute;
+    right: 1%;
+}
+.trxt_input .search{
+    border: 1px solid rgb(57, 141, 226);
+    border-radius: 5px;
+    width: 250px;
+    padding: 5px;
+    outline: none;
+    font-size: 19px;
+}
+.content{
+     height: 80%;
+    overflow: scroll;
+    background-color: #F5F5F5;
+    box-shadow: 2px 3px 11px #9e9e9e;
+}
+/* 口罩缺貨icon */
+.out_of_stock img {
+    width: 50px;
+    padding-top:20px;
+}
+.List_Show img{
+    width: 30px;
+    position: absolute;
+    right: 20px;
+}
+.List_Show img:hover{
+    cursor: pointer;
+}
+.SearchResult li{
+    padding: 10px 8px 10px 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #8BC34A;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.pharmacy{
+    font-size: 30px;
+    font-weight: bold;
+    color: #00bcd4fa;
+    margin-left: 30px;
+}
+.address{
+    color: #847e7e;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+.phone{
+    color: #847e7e;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 20px;
+}
+.Business_Time{
+    padding: 10px;
+    color: #847e7e;
+    font-weight: bold;
+    /* line-height: 20px; */
+    text-align: center;
+}
+.adult{
+    background-color: #3f51b5;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    color: lavenderblush;
+    font-size: 20px;
+}
+.chid{
+    background-color: #F44336;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    color: lavenderblush;
+    font-size: 20px;
+}
+.collapse{
+    outline: none;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    width: 30px;
+    top: 110px;
+    right: -30px;
+    font-size: 12px;
+    padding: 8px;
+    background-color: #00BCD4;
+}
+.collapse img{
+    width: 30px;
+    height: 30px;
+    margin-left: -8px
+}
+.collapse img:hover{
+    transform:scaleX(-1);
+}
+

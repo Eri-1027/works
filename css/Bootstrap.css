@@ -1,0 +1,53 @@
+.navbar_fixed {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.nav_A:hover {
+    color: black;
+}
+
+.vid_back {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.vid_cont {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    border-width: 3px
+}
+
+.herader-carousel-item {
+    height: 450px;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-caption {
+    background-color: rgb(96 125 139 / 61%);
+    border-radius: 10px;
+}
+
+.form-control {
+    border-width: 3px;
+}
+
+p {
+    font-family: system-ui;
+}
+
+.card {
+    color: black;
+}
